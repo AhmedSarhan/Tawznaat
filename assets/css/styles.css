@@ -1,0 +1,227 @@
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+/* the body backgroudn  */
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: -webkit-fill-available;
+    height: auto;
+      
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* make it disabled */
+    pointer-events: none;
+}
+  
+  @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
+
+
+/* the  navbar */
+.navbar-light .navbar-brand{
+    margin: 0 auto;
+}
+.navbar-light .navbar-brand img{
+    width: 10%;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* The wite toggler icon  */
+.navbar-light .navbar-toggler-icon {
+    
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    margin-right: 20px ;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+
+
+
+/* the sidebar */
+/* making the navbar fixed to the left  */
+.navbar-fixed-left {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    margin-top:140px;
+    padding-top: 20px;
+    margin-right: 20px ;
+}
+ 
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+.navbar-fixed-left .navbar-nav > li {
+    float: none;  /* Cancel default li float: left */
+    /* width: 139px; */
+     /* this first line made the words turn into vertical */
+    writing-mode: vertical-lr; 
+    /* this second line made the words turn 180 deg to inverse it */
+    transform:rotate(180deg);
+
+}
+  
+.navbar-fixed-left + .container {
+    /* padding-left: 160px; */
+}
+.navbar-fixed-left .navbar-nav .nav-link,
+.navbar-fixed-left .navbar-nav .active>.nav-link,
+.navbar-fixed-left .navbar-nav .nav-link.active,
+.navbar-fixed-left .navbar-nav .nav-link.show,
+.navbar-fixed-left .navbar-nav .show>.nav-link{
+    color: rgba(255, 255, 255, 0.678);
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+    .navbar-fixed-left{
+        margin-top:240px;
+    }
+  }
+
+.navbar-fixed-left .navbar-nav .nav-link:focus, .navbar-fixed-left .navbar-nav .nav-link:hover {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    animation: slide 2s ease-in-out .5s infinite alternate;
+    /* animation: step-start 120s; */
+}
+.btn-warning{
+    background-color: #9c893a !important;
+    border-color: #9c893a !important;
+    color: #fff !important;
+    border-radius: 50px;
+}
+
+.main{
+    margin: 0 auto;
+    margin-top:90px;
+    color: white;
+}
+.main form{
+    margin: 0 auto;
+    display: table;
+    width: 90%;
+}
+.main h2{
+    color: #fff;
+    margin: 0 auto;
+    display: table;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+.main .form-control{
+    margin-bottom: 6px;
+    border-radius: 20px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+.main .btn-warning{
+    padding: 8px 30px;
+}
+.main .col-md-6{
+    margin: 0 auto;
+    display: table;
+    width: 80%;
+}
+.main h4{
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Modal */
+
+.modal, .modal-content{
+    background-color: #9c893a !important;
+    border-color: #9c893a !important;
+}
+
+.modal .header{
+    margin-top: 40px;
+}
+.modal .header button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 3em;
+}
+.modal .header .close{
+    text-shadow: none;
+    opacity: 1;
+}
+.modal .lang{
+    float: left;
+    text-align: right;
+    color: #fff;
+    opacity: 0.5;
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-right: 875px;
+    font-size: large;
+}
+.modal .modal-body ul{
+    list-style: none;
+    margin: 0 auto;
+    text-align: center; 
+}
+.modal .modal-body ul li{
+    margin-bottom: 15px;
+
+}
+.modal-link{
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 2em;
+    text-align: center;
+    font-weight: 500;
+
+}
+.modal-link span{
+    display: none;
+}
+.modal-link:hover{
+    color: #fff;
+    font-size: 2.2em;
+    transition: 600ms;
+    text-decoration: none;
+}
+.modal-link:hover span{
+    display: inline;
+}
